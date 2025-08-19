@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Employee Onboarding Form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="navbar-brand" href="#">
+     <img src="img/vecteezy_golden-logo-template_23654784.png" alt="logo" width="30" height="30" />
+      <b>Levitica Technologies Pvt Ltd</b>
+    </a>
+    <br>
+    <div class="main-container">
+      <nav class="onboarding-nav navbar navbar-expand-lg rounded">
+        <div class="container-fluid">
+          <div class="d-flex flex-column flex-lg-row align-items-center w-100">
+            <div class="progress-container">
+              <div class="progress">
+                <div
+                  class="progress-bar"
+                  id="progress-bar"
+                  style="width: 16.66%"
+                ></div>
+              </div>
+              <div class="step-circle active" data-page="1">
+                <span>1</span>
+                <div class="step-label">Personal</div>
+              </div>
+              <div class="step-circle" data-page="2">
+                <span>2</span>
+                <div class="step-label">Account</div>
+              </div>
+              <div class="step-circle" data-page="3">
+                <span>3</span>
+                <div class="step-label">Tax</div>
+              </div>
+              <div class="step-circle" data-page="4">
+                <span>4</span>
+                <div class="step-label">Super</div>
+              </div>
+              <div class="step-circle" data-page="5">
+                <span>5</span>
+                <div class="step-label">Employment</div>
+              </div>
+              <div class="step-circle" data-page="6">
+                <span>6</span>
+                <div class="step-label">Review</div>
+              </div>
+            </div>
+
+            <div class="nav-buttons">
+              <button class="btn btn-nav btn-prev prev-btn" disabled>
+                <i class="bi bi-chevron-left"></i>
+                <span>Previous</span>
+              </button>
+              <button class="btn btn-nav btn-next next-btn">
+                <span>Next</span>
+                <i class="bi bi-chevron-right"></i>
+              </button>
+              <button class="btn btn-nav btn-cancel cancel-btn">
+                <i class="bi bi-x-circle"></i>
+                <span>Cancel</span>
+              </button>
+              <button class="btn btn-nav btn-submit submit-btn d-none">
+                <i class="bi bi-check-circle"></i>
+                <span>Submit</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <form id="onboarding-form">
+        <!-- Page 1: Personal Details -->
+        <div class="form-page active" id="page1" data-page="1">
+          <h3><i class="bi bi-person-badge"></i> Personal Details</h3>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="firstName" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="firstName" required />
+            </div>
+            <div class="col-md-6">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="lastName" required />
+            </div>
+            <div class="col-md-6">
+              <label for="dob" class="form-label">Date of Birth</label>
+              <input type="date" class="form-control" id="dob" required />
+            </div>
+            <div class="col-md-6">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required />
+            </div>
+            <div class="col-md-6">
+              <label for="phone" class="form-label">Phone Number</label>
+              <div class="phone-input-group">
+                <select class="form-select" id="phoneCode">
+                  <option value="+91">IN (+91)</option>
+                  <option value="+7">RU (+7)</option>
+                  <option value="+1">US (+1)</option>
+                  <option value="+44">UK (+44)</option>
+                  <option value="+61">AU (+61)</option>
+                  <option value="+81">JP (+81)</option>
+                  <option value="+49">DE (+49)</option>
+                  <option value="+33">FR (+33)</option>
+                  <option value="+39">IT (+39)</option>
+                  <option value="+34">ES (+34)</option>
+                  <option value="+39">PT (+39)</option>
+                  <option value="+55">BR (+55)</option>
+                  <option value="no">other</option>
+                </select>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  pattern="[0-9]{10}"
+                  placeholder="10-digit number"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="altPhone" class="form-label"
+                >Alternate Phone Number</label
+              >
+              <div class="phone-input-group">
+                <select class="form-select" id="altPhoneCode">
+                  <option value="+91">IN (+91)</option>
+                   <option value="+7">RU (+7)</option>
+                  <option value="+1">US (+1)</option>
+                  <option value="+44">UK (+44)</option>
+                  <option value="+61">AU (+61)</option>
+                  <option value="+81">JP (+81)</option>
+                  <option value="+49">DE (+49)</option>
+                  <option value="+33">FR (+33)</option>
+                  <option value="+39">IT (+39)</option>
+                  <option value="+34">ES (+34)</option>
+                  <option value="+39">PT (+39)</option>
+                  <option value="+55">BR (+55)</option>
+                  <option value="no">other</option>
+                </select>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="altPhone"
+                  pattern="[0-9]{10}"
+                  placeholder="10-digit number"
+                />
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Upload Photo</label>
+              <div class="file-upload-container" id="photoUploadContainer">
+                <i class="bi bi-cloud-upload file-upload-icon"></i>
+                <p>Click to upload or drag and drop</p>
+                <p class="text-muted">JPG, PNG (Max. 5MB)</p>
+                <img id="photoPreview" class="file-upload-preview" />
+              </div>
+              <input
+                type="file"
+                id="photoUpload"
+                accept="image/*"
+                style="display: none"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="fatherName" class="form-label">Father's Name</label>
+              <input type="text" class="form-control" id="fatherName" />
+            </div>
+            <div class="col-md-6">
+              <label for="motherName" class="form-label">Mother's Name</label>
+              <input type="text" class="form-control" id="motherName" />
+            </div>
+            <div class="col-12">
+              <label for="address" class="form-label">Address</label>
+              <textarea
+                class="form-control"
+                id="address"
+                rows="3"
+                required
+              ></textarea>
+            </div>
+            <div class="col-md-4">
+              <label for="state" class="form-label">State</label>
+              <select class="form-select" id="state" required>
+                <option value="">Select State</option>
+                <option value="i">India</option>
+                <option value="NY">New York</option>
+                <option value="CA">California</option>
+                <option value="TX">Texas</option>
+                <option value="FL">Florida</option>
+                <option value="IL">Illinois</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="city" class="form-label">City</label>
+              <input type="text" class="form-control" id="city" required />
+            </div>
+            <div class="col-md-4">
+              <label for="pincode" class="form-label">Pincode</label>
+              <input type="text" class="form-control" id="pincode" required />
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 2: Account Details -->
+        <div class="form-page" id="page2" data-page="2">
+          <h3><i class="bi bi-bank"></i> Account Details</h3>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="bankName" class="form-label">Bank Name</label>
+              <input type="text" class="form-control" id="bankName" required />
+            </div>
+            <div class="col-md-6">
+              <label for="accountNumber" class="form-label"
+                >Account Number</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="accountNumber"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="ifscCode" class="form-label">IFSC Code</label>
+              <input type="text" class="form-control" id="ifscCode" required />
+            </div>
+            <div class="col-md-6">
+              <label for="branch" class="form-label">Branch</label>
+              <input type="text" class="form-control" id="branch" required />
+            </div>
+            <div class="col-md-6">
+              <label for="panNumber" class="form-label">PAN Card Number</label>
+              <input
+                type="text"
+                class="form-control"
+                id="panNumber"
+                pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}"
+                placeholder="e.g., ABCDE1234F"
+                required
+              />
+            </div>
+            <div class="col-12">
+              <label class="form-label">Upload PAN Card</label>
+              <div class="file-upload-container" id="panUploadContainer">
+                <i class="bi bi-cloud-upload file-upload-icon"></i>
+                <p>Click to upload or drag and drop</p>
+                <p class="text-muted">JPG, PNG, PDF (Max. 5MB)</p>
+                <img id="panPreview" class="file-upload-preview" />
+              </div>
+              <input
+                type="file"
+                id="panUpload"
+                accept="image/*,.pdf"
+                style="display: none"
+              />
+            </div>
+            <div class="col-12">
+              <label class="form-label">Upload Bank Details Proof</label>
+              <div class="file-upload-container" id="bankUploadContainer">
+                <i class="bi bi-cloud-upload file-upload-icon"></i>
+                <p>Click to upload or drag and drop</p>
+                <p class="text-muted">JPG, PNG, PDF (Max. 5MB)</p>
+                <img id="bankPreview" class="file-upload-preview" />
+              </div>
+              <input
+                type="file"
+                id="bankUpload"
+                accept="image/*,.pdf"
+                style="display: none"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 3: Tax Details -->
+        <div class="form-page" id="page3" data-page="3">
+          <h3><i class="bi bi-cash-coin"></i> Tax Details</h3>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="taxFileNumber" class="form-label"
+                >Tax File Number</label
+              >
+              <input type="text" class="form-control" id="taxFileNumber" />
+            </div>
+            <div class="col-md-6">
+              <label for="declarationDate" class="form-label"
+                >Declaration Date</label
+              >
+              <input type="date" class="form-control" id="declarationDate" />
+            </div>
+            <div class="col-12">
+              <label class="form-label"
+                >Do you want to claim tax-free threshold?</label
+              >
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="taxFree"
+                  id="taxFreeYes"
+                  value="yes"
+                />
+                <label class="form-check-label" for="taxFreeYes">Yes</label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="taxFree"
+                  id="taxFreeNo"
+                  value="no"
+                  checked
+                />
+                <label class="form-check-label" for="taxFreeNo">No</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="taxResident" class="form-label"
+                >Tax Resident Status</label
+              >
+              <select class="form-select" id="taxResident">
+                <option value="">Select Status</option>
+                <option value="resident">Resident</option>
+                <option value="nonresident">Non-Resident</option>
+                <option value="temporary">Temporary Resident</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="taxOffset" class="form-label"
+                >Tax Offset Eligibility</label
+              >
+              <select class="form-select" id="taxOffset">
+                <option value="">Select Option</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label for="additionalTaxInfo" class="form-label"
+                >Additional Tax Information</label
+              >
+              <textarea
+                class="form-control"
+                id="additionalTaxInfo"
+                rows="3"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 4: Superannuation Details -->
+        <div class="form-page" id="page4" data-page="4">
+          <h3><i class="bi bi-piggy-bank"></i> Superannuation Details</h3>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="fundName" class="form-label">Name of Fund</label>
+              <input type="text" class="form-control" id="fundName" />
+            </div>
+            <div class="col-md-6">
+              <label for="accountName" class="form-label"
+                >Name of Account</label
+              >
+              <input type="text" class="form-control" id="accountName" />
+            </div>
+            <div class="col-md-6">
+              <label for="membershipNumber" class="form-label"
+                >Membership Number</label
+              >
+              <input type="text" class="form-control" id="membershipNumber" />
+            </div>
+            <div class="col-md-6">
+              <label for="fundAbn" class="form-label">Fund ABN</label>
+              <input type="text" class="form-control" id="fundAbn" />
+            </div>
+            <div class="col-md-6">
+              <label for="fundSpin" class="form-label">Fund SPIN</label>
+              <input type="text" class="form-control" id="fundSpin" />
+            </div>
+            <div class="col-md-6">
+              <label for="fundBsb" class="form-label">Fund BSB</label>
+              <input type="text" class="form-control" id="fundBsb" />
+            </div>
+            <div class="col-md-6">
+              <label for="fundAccountNumber" class="form-label"
+                >Fund Account Number</label
+              >
+              <input type="text" class="form-control" id="fundAccountNumber" />
+            </div>
+            <div class="col-md-6">
+              <label for="fundContact" class="form-label"
+                >Fund Contact Details</label
+              >
+              <input type="text" class="form-control" id="fundContact" />
+            </div>
+            <div class="col-md-6">
+              <label for="fundTel" class="form-label">Fund Telephone</label>
+              <input type="tel" class="form-control" id="fundTel" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 5: Employment Details -->
+        <div class="form-page" id="page5" data-page="5">
+          <h3><i class="bi bi-briefcase"></i> Employment Details</h3>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="employeeName" class="form-label">Employee Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="employeeName"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="role" class="form-label">Role/Position</label>
+              <input type="text" class="form-control" id="role" required />
+            </div>
+            <div class="col-md-6">
+              <label for="joinDate" class="form-label">Join Date</label>
+              <input type="date" class="form-control" id="joinDate" required />
+            </div>
+            <div class="col-md-6">
+              <label for="salary" class="form-label">Salary (PA)</label>
+              <input type="number" class="form-control" id="salary" required />
+            </div>
+            <div class="col-md-6">
+              <label for="salaryType" class="form-label">Salary Type</label>
+              <select class="form-select" id="salaryType" required>
+                <option value="ft">Full Time</option>
+                <option value="fte">FTE</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="houseRent" class="form-label"
+                >House Rent Allowance</label
+              >
+              <input type="number" class="form-control" id="houseRent" />
+            </div>
+            <div class="col-md-6">
+              <label for="award" class="form-label"
+                >Award & Classification</label
+              >
+              <input type="text" class="form-control" id="award" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Employment Mode</label>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="employmentMode"
+                  id="modeFullTime"
+                  value="full-time"
+                  checked
+                />
+                <label class="form-check-label" for="modeFullTime"
+                  >Full Time</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="employmentMode"
+                  id="modePartTime"
+                  value="part-time"
+                />
+                <label class="form-check-label" for="modePartTime"
+                  >Part Time</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="employmentMode"
+                  id="modeCasual"
+                  value="casual"
+                />
+                <label class="form-check-label" for="modeCasual">Casual</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="workingDays" class="form-label"
+                >Working Days per Week</label
+              >
+              <select class="form-select" id="workingDays">
+                <option value="5">5 Days</option>
+                <option value="4">4 Days</option>
+                <option value="6">6 Days</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Number of Leaves</label>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="leaves"
+                  id="leaves15"
+                  value="15"
+                />
+                <label class="form-check-label" for="leaves15">15 Days</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="leaves"
+                  id="leaves20"
+                  value="20"
+                  checked
+                />
+                <label class="form-check-label" for="leaves20">20 Days</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="leaves"
+                  id="leaves25"
+                  value="25"
+                />
+                <label class="form-check-label" for="leaves25">25 Days</label>
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="additionalInfo" class="form-label"
+                >Additional Information</label
+              >
+              <textarea
+                class="form-control"
+                id="additionalInfo"
+                rows="3"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 6: Review & Submit -->
+        <div class="form-page" id="page6" data-page="6">
+          <h3>
+            <i class="bi bi-file-earmark-text"></i> Review Your Information
+          </h3>
+          <div
+            class="review-container bg-light p-4 rounded mb-4"
+            id="review-content"
+          >
+            <!-- Dynamically filled by JavaScript -->
+          </div>
+          <div class="form-check mb-4">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="terms"
+              required
+            />
+            <label class="form-check-label" for="terms"
+              >I agree to the terms and conditions</label
+            >
+          </div>
+        </div>
+
+        <!-- Confirmation Page -->
+        <div class="confirmation-page text-center py-5" id="confirmation-page">
+          <div class="checkmark-circle mb-4">
+            <i class="bi bi-check-circle-fill checkmark"></i>
+          </div>
+          <h2 class="h4 mb-3">Thank You!</h2>
+          <p class="mb-4">
+            Your employee onboarding form has been submitted successfully.
+          </p>
+          <p class="mb-4">
+            A confirmation email has been sent to your registered email address.
+          </p>
+          <div
+            class="confirmation-details bg-light p-4 rounded mx-auto"
+            id="confirmation-details"
+          >
+            <!-- Dynamically filled by JavaScript -->
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
